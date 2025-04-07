@@ -9,14 +9,15 @@ void Stopwatch::start() {
     timer->start(100); // обновление каждые 0.1 сек
 }
 
-void Stopwatch::stop() {
+double Stopwatch::stop() {
     timer->stop();
-    emit stopped(timeElapsed);
+    return timeElapsed;
 }
 
 void Stopwatch::reset() {
-    stop();
+
     timeElapsed = 0;
+    lastTime = 0;
     emit timeChanged(timeElapsed);
 }
 

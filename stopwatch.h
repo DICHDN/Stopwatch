@@ -10,14 +10,14 @@ class Stopwatch : public QObject
 public:
     Stopwatch(QObject *parent = nullptr);
     void start();
-    void stop();
+    double stop();
     void reset();
     double elapsedTime() const;
     double lastTime=0;
 
 signals:
     void timeChanged(double time);
-    void stopped(double time);
+    //void stopped(double time);
 
 private slots:
     void updateTime();

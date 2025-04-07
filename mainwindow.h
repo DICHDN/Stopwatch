@@ -22,7 +22,7 @@ private slots:
     void on_pB_Clear_clicked();
     void on_pB_Round_clicked();
     void updateTimeDisplay(double time);
-    void handleStop(double time);
+
 
 private:
     Ui::MainWindow *ui;
